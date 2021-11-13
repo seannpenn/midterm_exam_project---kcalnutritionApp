@@ -38,6 +38,9 @@ flutter:
 
   assets:
     - assets/landingpage_background.png
+    - assets/onBoard1.png
+    - assets/onBoard2.png
+    - assets/onBoard3.png
 
   
   fonts:
