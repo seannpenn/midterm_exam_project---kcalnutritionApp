@@ -8,8 +8,8 @@ class landingPage extends StatefulWidget{
 class _landingPagestate extends State<landingPage>{
   @override
   
-  Widget build(BuildContext context){
-    return Scaffold(  
+ Widget build(BuildContext context){
+    return Scaffold(   
       body: Container(
         
         // height: 300,

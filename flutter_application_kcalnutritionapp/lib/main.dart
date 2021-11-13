@@ -6,6 +6,7 @@ import 'package:flutter_application_kcalnutritionapp/screens/onBoarding.dart';
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
+  
   initialRoute: "/onBoarding",
   routes:{
     '/':(context) =>landingPage(),
