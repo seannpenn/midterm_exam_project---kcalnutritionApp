@@ -1,16 +1,22 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_kcalnutritionapp/layout/defaultLayoutPages/favorites.dart';
 import 'package:flutter_application_kcalnutritionapp/screens/landing_page.dart';
 import 'package:flutter_application_kcalnutritionapp/screens/onBoarding.dart';
+import 'package:flutter_application_kcalnutritionapp/screens/login.dart';
+import 'package:flutter_application_kcalnutritionapp/layout/defaultLayout.dart';
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
   
-  initialRoute: "/onBoarding",
+  initialRoute: "/defaultLayout",
   routes:{
     '/':(context) =>landingPage(),
     '/onBoarding':(context) => onBoardingPage(),
+    '/login':(context) => login(),
+    '/favorites':(context) => favorites(),
+    '/defaultLayout':(context) => defaultLayout(),
     // '/login':(context) => login(),
   },
     
