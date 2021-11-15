@@ -10,7 +10,11 @@ import 'package:flutter_application_kcalnutritionapp/layout/defaultLayout.dart';
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
   
+<<<<<<< HEAD
   initialRoute: "/defaultLayout",
+=======
+  initialRoute: "/onBoarding",
+>>>>>>> main
   routes:{
     '/':(context) =>landingPage(),
     '/onBoarding':(context) => onBoardingPage(),
