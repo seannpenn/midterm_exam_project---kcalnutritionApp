@@ -28,10 +28,19 @@ dependencies:
 
   introduction_screen: ^2.1.0
 
+  scroll_bottom_navigation_bar: ^4.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  flutter_native_splash: ^0.2.8
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/landingpage_background.png
+  android: true
+  ios: true
 
 flutter:
   uses-material-design: true
@@ -41,8 +50,17 @@ flutter:
     - assets/onBoard1.png
     - assets/onBoard2.png
     - assets/onBoard3.png
+    - assets/rightArrow.png
+    - assets/cookies.png
+    - assets/gallery.jpg
+    - assets/gallery2.jpg
+    - assets/5-stars.png
+    - assets/recipe1.jpg
+    - assets/cabbage.jpg
+    - assets/salmon.jpg
+    - assets/lemon.jpg
+    - assets/redchilli.jpg
 
-  
   fonts:
     - family: rounded
       fonts:
@@ -50,6 +68,9 @@ flutter:
     - family: rounded(2)
       fonts:
         - asset: fonts/Nunito-Bold.ttf
+    - family: Barlow
+      fonts:
+        - asset: fonts/BarlowSemiCondensed-Light.ttf
         
   #
   # For details regarding fonts from package dependencies,

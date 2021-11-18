@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_kcalnutritionapp/layout/defaultLayoutPages/favorites.dart';
+import 'package:flutter_application_kcalnutritionapp/layout/defaultLayoutPages/favorites/favorites.dart';
 import 'package:flutter_application_kcalnutritionapp/layout/defaultLayoutPages/home.dart';
-
 
 class defaultLayout extends StatefulWidget {
   const defaultLayout({Key? key}) : super(key: key);
@@ -14,26 +13,7 @@ class _MyStatefulWidgetState extends State<defaultLayout> {
   // static const TextStyle optionStyle =
   //     TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> _widgetOptions = <Widget>[
-    // Text(
-    //   'Index 0: Home',
-    //   style: optionStyle,
-    // ),
-    // Text(
-    //   'Index 1: Search',
-    //   style: optionStyle,
-    // ),
-    // Text(
-    //   'Index 2: Camera',
-    //   style: optionStyle,
-    // ),
-    // Text(
-    //   'Index 3: Camera',
-    //   style: optionStyle,
-    // ),
-    // Text(
-    //   'Index 4: Profile',
-    //   style: optionStyle,
-    // ),
+    
     home(),
     favorites(),
     favorites(),

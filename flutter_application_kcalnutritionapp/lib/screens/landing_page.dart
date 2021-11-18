@@ -29,13 +29,16 @@ class _landingPagestate extends State<landingPage>{
                 margin: EdgeInsets.only(top: 300.0),
 
                 child: Text(
-                    'kcala',
+                    'kcal',
                     style: TextStyle(
                       fontFamily: 'rounded(2)',
                       fontSize: 95, color: Colors.white, fontWeight: FontWeight.bold
                     ),
                 ),
               ),
+                // SizedBox(height: 20,),
+                // CircularProgressIndicator(
+                // valueColor: AlwaysStoppedAnimation<Color>(Colors.white),),
               Container(
                 margin: EdgeInsets.only(top: 180.0),
                 // margin: EdgeInsets.only(top: 50.0),

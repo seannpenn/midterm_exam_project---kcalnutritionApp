@@ -4,6 +4,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:flutter_application_kcalnutritionapp/screens/onBoardingScreens/AllScreen.dart';
+import 'package:flutter_application_kcalnutritionapp/screens/login.dart';
 
 
 
@@ -118,7 +119,11 @@ class customButton extends StatelessWidget{
                       ),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
-                          Navigator.pushNamed(context, '/login');
+                          // Navigator.pushNamed(context, 'login()');
+                          Navigator.push(context, new MaterialPageRoute(
+                          builder: (context) =>
+                            new login())
+                          );
                           print('Login Text Clicked');
                         }),
                 ]),
