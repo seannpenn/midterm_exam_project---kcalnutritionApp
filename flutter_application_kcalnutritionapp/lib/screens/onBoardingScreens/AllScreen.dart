@@ -33,7 +33,7 @@ class firstScreen extends StatelessWidget{
             )
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 5.0,right: 5.0),
+          padding: const EdgeInsets.only(left: 20.0,right: 20.0),
           child: Container(
             margin: EdgeInsets.only(bottom: 10),
             child: 
@@ -92,7 +92,7 @@ class secondScreen extends StatelessWidget{
         ),
 
         Container(
-
+          padding: const EdgeInsets.only(left: 20.0,right: 20.0),
           margin: EdgeInsets.only(bottom: 10),
           child: 
             Text("Browse thousands of healthy recipes from all over the world.",
@@ -146,6 +146,7 @@ class thirdScreen extends StatelessWidget{
         ),
 
         Container(
+          padding: const EdgeInsets.only(left: 20.0,right: 20.0),
           margin: EdgeInsets.only(bottom: 10),
           child: 
             Text("With amazing inbuilt tools you can track your progress.",

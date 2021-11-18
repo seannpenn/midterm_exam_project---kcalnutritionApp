@@ -52,6 +52,7 @@ flutter:
     - assets/onBoard3.png
     - assets/rightArrow.png
     - assets/cookies.png
+    - assets/burger.png
     - assets/gallery.jpg
     - assets/gallery2.jpg
     - assets/5-stars.png
@@ -60,6 +61,20 @@ flutter:
     - assets/salmon.jpg
     - assets/lemon.jpg
     - assets/redchilli.jpg
+    - assets/oil.jpg
+    - assets/dill.jpg
+    - assets/coriander.jpeg
+    - assets/NoFood.png
+    - assets/NoRecipes.png
+    - assets/fruitVeggie.jpg
+    - assets/fishSteak.jpg
+    - assets/chocoLamb.jpg
+    - assets/chickenLeg.jpg
+    - assets/cakes.png
+    - assets/pizza.png
+    - assets/hotdog.png
+    - assets/fries.png
+    - assets/donuts.png
 
   fonts:
     - family: rounded

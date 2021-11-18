@@ -70,7 +70,7 @@ class cookiesContent extends StatelessWidget {
                     'assets/recipe1.jpg',
                     fit: BoxFit.cover,
                     width: 360,
-                    height: 150,
+                    height: 220,
                   ),
                 ),
               ),
@@ -161,19 +161,6 @@ class cookiesContent extends StatelessWidget {
                           height: 1.5),
                     ),
                   ),
-                  // Container(
-                  //   width: 350,
-                  //   padding: EdgeInsets.all(18),
-                  //   child: Text(
-                  //     "In most English-speaking countries except for the United States, crunchy cookies are called biscuits. Many Canadians also use this term. Chewier biscuits are sometimes called cookies even in the United Kingdom.[3] Some cookies may also be named by their shape, such as date squares or bars.",
-                  //     style: TextStyle(
-                  //         color: Colors.grey[600],
-                  //         fontSize: 20,
-                  //         fontFamily: 'Barlow',
-                  //         fontWeight: FontWeight.w600,
-                  //         height: 1.5),
-                  //   ),
-                  // )
                 ],
               ),
             ],
@@ -199,108 +186,109 @@ class cookiesContent extends StatelessWidget {
           SizedBox(height:10),
           Container(
             margin: const EdgeInsets.symmetric(vertical: 20.0),
-          height: 80.0,
+          height: 120.0,
             child: ListView(
               scrollDirection: Axis.horizontal,
                   // mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-    //                 Container(
-    //   width: 160.0,
-    //   color: Colors.red,
-    // ),
-    // Container(
-    //   width: 160.0,
-    //   color: Colors.blue,
-    // ),
-    // Container(
-    //   width: 160.0,
-    //   color: Colors.green,
-    // ),
-    // Container(
-    //   width: 160.0,
-    //   color: Colors.yellow,
-    // ),
-    // Container(
-    //   width: 160.0,
-    //   color: Colors.orange,
-    // ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 23),
-                      child: Container(
-                      color: Colors.yellow[50],
-                        child: FittedBox(
-                          child: Image.asset(
-                            'assets/salmon.jpg',
-                            fit: BoxFit.cover,
-                            width: 80,
-                            height: 80,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 23),
-                      child: Container(
-                      color: Colors.yellow[50],
-                        child: FittedBox(
-                          child: Image.asset(
-                            'assets/recipe1.jpg',
-                            fit: BoxFit.cover,
-                            width: 80,
-                            height: 80,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 23),
-                      child: Container(
-                      color: Colors.yellow[50],
-                        child: FittedBox(
-                          child: Image.asset(
-                            'assets/recipe1.jpg',
-                            fit: BoxFit.cover,
-                            width: 80,
-                            height: 80,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 23),
-                      child: Container(
-                      color: Colors.yellow[50],
-                        child: FittedBox(
-                          child: Image.asset(
-                            'assets/recipe1.jpg',
-                            fit: BoxFit.cover,
-                            width: 80,
-                            height: 80,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 23),
-                      child: Container(
-                      color: Colors.yellow[50],
-                        child: FittedBox(
-                          child: Image.asset(
-                            'assets/recipe1.jpg',
-                            fit: BoxFit.cover,
-                            width: 80,
-                            height: 80,
-                          ),
-                        ),
-                      ),
-                    ),
-                    
+                    Ingredients('assets/salmon.jpg','Fish','250gm'),
+                    Ingredients('assets/lemon.jpg','Lemon Juice','3 tbsp'),
+                    Ingredients('assets/cabbage.jpg','Cabbage','50gm'),
+                    Ingredients('assets/redchilli.jpg','Red Chilli','3 pcs'),
+                    Ingredients('assets/coriander.jpeg','Coriander','2 pinch'),
+                    Ingredients('assets/oil.jpg','Cooking oil','5 tbsp'),
+                    Ingredients('assets/dill.jpg','dill leaves','2 pcs'),
+                   
                   ],
                 ),
           ),
-          SizedBox(height: 70,),
+          // SizedBox(height: 70,),
+          Row(
+            
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 23),
+                child: 
+                Text(
+                  'Directions', 
+                    style: 
+                      TextStyle(
+                        fontSize: 21,
+                        fontWeight: FontWeight.w600
+                      ),
+                )
+              )
+            ] 
+          ),
+          Steps('Step 1', "To prepare this amazing non-vegetarian recipe, take the fish fillets and massage it gently with oil, keep aside in a plate."),
+          Steps('Step 2', "Grind together the garlic, turmeric powder, red chilli powder, green chillies, dill leaves, coriander powder, and salt. Add oil to it and grind to form a paste. Rub this all over the fish fillets and keep aside to marinate for 15 to 30 minutes."),
+          Steps('Step 3', "Grill the marinated fish on a preheated grill or oven till golden and crisp on both sides or for 5 minutes. Transfer to a plate"),
+          
+          SizedBox(height: 100,)
         ],
       ),
     );
   }
+}
+Widget Ingredients(String assetName, String title,String amount) {
+  return Padding(
+                      padding: const EdgeInsets.only(left: 23),
+                      child: Column(
+                        children: [
+                          Container(
+                          color: Colors.yellow[50],
+                            child: FittedBox(
+                              child: Image.asset(
+                                '$assetName',
+                                fit: BoxFit.cover,
+                                width: 80,
+                                height: 80,
+                              ),
+                            ),
+                          ),
+                          Column(children: [
+                            Text('$title'),
+                            Text('$amount')
+                          ],)
+                        ],
+                      ),
+                    );
+
+}
+Widget Steps(String stepNum, String instructions){
+  return Column(
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 18),
+                padding: EdgeInsets.only(left: 23),
+                child: Row(
+                  children: [
+                    Text('$stepNum', 
+                    style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          // fontFamily: 'Barlow',
+                          fontWeight: FontWeight.w900,
+                          height: 1.5),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(height: 5,),
+              Container(
+                    width: 350,
+                    padding: EdgeInsets.only(left: 18, right: 18),
+                    child: Text(
+                      "$instructions",
+                      style: TextStyle(
+                          color: Colors.grey[600],
+                          fontSize: 18,
+                          fontFamily: 'Barlow',
+                          fontWeight: FontWeight.w600,
+                          height: 1.5),
+                    ),
+                  ),
+              
+            ],
+          );
 }

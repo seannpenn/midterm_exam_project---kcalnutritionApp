@@ -69,9 +69,9 @@ class favoritesSearchContent extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  elevation: 0,
+                  elevation: 3,
                   // backgroundColor: Colors.lime[50],
-                  backgroundColor: Colors.yellow,
+                  backgroundColor: Colors.yellow[50],
                 ),
               ),
             ),
@@ -85,7 +85,7 @@ class favoritesSearchContent extends StatelessWidget {
                   children: [
                     Container(
                       child: Image.asset(
-                        'assets/cookies.png',
+                        'assets/burger.png',
                         width: 50,
                         height: 50,
                       ),
@@ -116,9 +116,9 @@ class favoritesSearchContent extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  elevation: 0,
+                  elevation: 3,
                   // backgroundColor: Colors.lime[50],
-                  backgroundColor: Colors.yellow,
+                  backgroundColor: Colors.yellow[50],
                 ),
               ),
             ),
@@ -137,7 +137,7 @@ class favoritesSearchContent extends StatelessWidget {
                   children: [
                     Container(
                       child: Image.asset(
-                        'assets/cookies.png',
+                        'assets/cakes.png',
                         width: 50,
                         height: 50,
                       ),
@@ -169,9 +169,9 @@ class favoritesSearchContent extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  elevation: 0,
+                  elevation: 3,
                   // backgroundColor: Colors.lime[50],
-                  backgroundColor: Colors.yellow,
+                  backgroundColor: Colors.yellow[50],
                 ),
               ),
             ),
@@ -185,7 +185,7 @@ class favoritesSearchContent extends StatelessWidget {
                   children: [
                     Container(
                       child: Image.asset(
-                        'assets/cookies.png',
+                        'assets/pizza.png',
                         width: 50,
                         height: 50,
                       ),
@@ -216,9 +216,9 @@ class favoritesSearchContent extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  elevation: 0,
+                  elevation: 3,
                   // backgroundColor: Colors.lime[50],
-                  backgroundColor: Colors.yellow,
+                  backgroundColor: Colors.yellow[50],
                 ),
               ),
             ),
@@ -237,7 +237,7 @@ class favoritesSearchContent extends StatelessWidget {
                   children: [
                     Container(
                       child: Image.asset(
-                        'assets/cookies.png',
+                        'assets/hotdog.png',
                         width: 50,
                         height: 50,
                       ),
@@ -268,9 +268,9 @@ class favoritesSearchContent extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  elevation: 0,
+                  elevation: 3,
                   // backgroundColor: Colors.lime[50],
-                  backgroundColor: Colors.yellow,
+                  backgroundColor: Colors.yellow[50],
                 ),
               ),
             ),
@@ -284,7 +284,7 @@ class favoritesSearchContent extends StatelessWidget {
                   children: [
                     Container(
                       child: Image.asset(
-                        'assets/cookies.png',
+                        'assets/fries.png',
                         width: 50,
                         height: 50,
                       ),
@@ -315,9 +315,9 @@ class favoritesSearchContent extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  elevation: 0,
+                  elevation: 3,
                   // backgroundColor: Colors.lime[50],
-                  backgroundColor: Colors.yellow,
+                  backgroundColor: Colors.yellow[50],
                 ),
               ),
             ),
@@ -336,7 +336,7 @@ class favoritesSearchContent extends StatelessWidget {
                   children: [
                     Container(
                       child: Image.asset(
-                        'assets/cookies.png',
+                        'assets/donuts.png',
                         width: 50,
                         height: 50,
                       ),
@@ -367,9 +367,9 @@ class favoritesSearchContent extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  elevation: 0,
+                  elevation: 3,
                   // backgroundColor: Colors.lime[50],
-                  backgroundColor: Colors.yellow,
+                  backgroundColor: Colors.yellow[50],
                 ),
               ),
             ),
@@ -402,7 +402,10 @@ class favoritesTabBar extends StatelessWidget {
               indicator: BoxDecoration(
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(10),
-                    bottomLeft: Radius.circular(10)),
+                      bottomLeft: Radius.circular(10),
+                      topRight: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
+                ),
                 color: Colors.green,
               ),
 

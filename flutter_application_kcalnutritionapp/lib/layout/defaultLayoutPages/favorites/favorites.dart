@@ -21,22 +21,65 @@ class foods extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, 
     children: [
-      Text(
-        'Krystel gwapa',
-        textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 40),
+      Container(
+        width: 100,
+        height: 100,
+        decoration: new BoxDecoration(
+          image: new DecorationImage(
+            colorFilter: new ColorFilter.mode(
+                Colors.white.withOpacity(0.3), BlendMode.dstATop),
+            image: new AssetImage(
+              'assets/NoFood.png',
+            ),
+          ),
+        ),
+      ),
+      Container(
+        child: Text(
+          'No Foods Found',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+            fontFamily: "Mallanna",
+          ),
+        ),
+      ),
+      Container(
+        width: 300,
+        child: Text(
+          "You don't save any food. Go ahead, search and save your favorite food.",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            fontFamily: "Mallanna",
+            color: Colors.grey,
+          ),
+        ),
       ),
       Container(
         child: 
-        ElevatedButton(
-                onPressed:() {
-                  Navigator.push(context, new MaterialPageRoute(
+        Material(
+          // elevation: 8,
+          borderRadius: BorderRadius.circular(20),
+          color: Colors.redAccent[100],
+          child: MaterialButton(
+            minWidth: 250,
+            height: 70,
+            padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+            onPressed: (){
+              Navigator.push(context, new MaterialPageRoute(
                     builder: (context) =>
                     new foodSearch())
                   );
-                },
-              child: const Text('Search'),
-            ),
+            }, // add this here
+            child: Text('Search',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 30, color: Colors.white)
+              ),           
+          ),    
+        ),
       )
     ]);
   }
@@ -48,22 +91,65 @@ class recipes extends StatelessWidget {
     mainAxisAlignment: MainAxisAlignment.spaceEvenly, 
     // children: [
         children: [
-          Text(
-            'recipes testing',
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 40),
+          Container(
+        width: 100,
+        height: 100,
+        decoration: new BoxDecoration(
+          image: new DecorationImage(
+            colorFilter: new ColorFilter.mode(
+                Colors.white.withOpacity(0.3), BlendMode.dstATop),
+            image: new AssetImage(
+              'assets/NoRecipes.png',
+            ),
           ),
+        ),
+      ),
+      Container(
+        child: Text(
+          'No Foods Found',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+            fontFamily: "Mallanna",
+          ),
+        ),
+      ),
+      Container(
+        width: 300,
+        child: Text(
+          "You don't save any food. Go ahead, search and save your favorite food.",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            fontFamily: "Mallanna",
+            color: Colors.grey,
+          ),
+        ),
+      ),
           Container(
         child: 
-        ElevatedButton(
-                onPressed:() {
-                  Navigator.push(context, new MaterialPageRoute(
+        Material(
+          // elevation: 8,
+          borderRadius: BorderRadius.circular(20),
+          color: Colors.redAccent[100],
+          child: MaterialButton(
+            minWidth: 250,
+            height: 70,
+            padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+            onPressed: (){
+              Navigator.push(context, new MaterialPageRoute(
                     builder: (context) =>
-                    recipeSearch())
+                    new recipeSearch())
                   );
-                },
-              child: const Text('Search'),
-            ),
+            }, // add this here
+            child: Text('Search',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 30, color: Colors.white)
+              ),           
+          ),    
+        ),
       )
         ],
     );
@@ -116,7 +202,11 @@ class favoritesTabBar extends StatelessWidget {
                 indicator: BoxDecoration(
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(10),
-                      bottomLeft: Radius.circular(10)),
+                      bottomLeft: Radius.circular(10),
+                      topRight: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
+                      
+                      ),
                   color: Colors.green,
                 ),
                 indicatorColor: Colors.grey,
@@ -126,11 +216,13 @@ class favoritesTabBar extends StatelessWidget {
                   
                   new Container(
                     decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(10),
-                      bottomLeft: Radius.circular(10)),
-                  // color: Colors.grey,
-                ),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        bottomLeft: Radius.circular(10),
+                        
+                      ),
+                      // color: Colors.black
+                    ),
                     // color: Colors.black,
                     width: 130,
                     height: 50,

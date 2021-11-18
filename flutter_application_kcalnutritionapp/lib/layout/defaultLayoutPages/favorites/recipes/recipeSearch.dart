@@ -33,30 +33,33 @@ class favoritesSearchContent extends StatelessWidget {
               );
             },
             child: customContainer(
-                'assets/gallery.jpg',
+                'assets/fishSteak.jpg',
                 'Fish Steaks With Veggie Sauce',
                 '3 serve',
                 'Boneless with stakes with cripsy fried sauce and toppings.',
                 '55 min'),
           ),
           customContainer(
-              'assets/onBoard1.png',
+              'assets/chocoLamb.jpg',
               'Choco Lamb Veggies',
               '1 serve',
               'Deeply fried lamb meat with choco dips and fresh vegetables.',
               '25 min'),
           customContainer(
-              'assets/onBoard1.png',
+              'assets/chickenLeg.jpg',
               'Chicken Leg Piece',
               '2 serve',
               'Crispy chicken lep pieces with side veggies and sauce.',
               '25 min'),
-          customContainer(
-              'assets/onBoard1.png',
-              'Fruit Veggie Mix With Meat',
-              '1 serve',
-              'Crunchy deep fried meat mixed with fruits and vegetables.',
-              '15 min'),
+          Container(
+            margin: EdgeInsets.only(bottom: 20),
+            child: customContainer(
+                'assets/fruitVeggie.jpg',
+                'Fruit Veggie Mix With Meat',
+                '1 serve',
+                'Crunchy deep fried meat mixed with fruits and vegetables.',
+                '15 min'),
+          ),
       ],
         ),
       )
@@ -69,24 +72,38 @@ Widget customContainer(String assetName, String title, String serve,
     String definition, String time) {
       
   return Container(
-    
-    margin: EdgeInsets.only(top: 20, left: 30),
+    padding: EdgeInsets.only(top: 20, right: 10),
+    margin: EdgeInsets.only(left: 30,),
     child: FittedBox(
       child: Material(
+        elevation: 8,
         color: Colors.yellow[50],
         borderRadius: BorderRadius.circular(24),
         child: Column(
           children:[
-            Container(
-              width: 300,
-              height: 150,
-              child: ClipRRect(
-                  borderRadius: BorderRadius.only(topLeft: Radius.circular(24), topRight: Radius.circular(24)),
-                  child: Image(
-                    fit: BoxFit.cover,
-                    image: AssetImage('$assetName'),
-                  )),
+            Stack(
+              children: [
+                Container(
+                
+                  width: 300,
+                  height: 150,
+                  child: ClipRRect(
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(24), topRight: Radius.circular(24)),
+                      child: Image(
+                        fit: BoxFit.fill,
+                        image: AssetImage('$assetName'),
+                      )  
+                  ),
+
+                ),
+                Positioned(
+                  top: 5, right: 15,
+                  child: Icon(Icons.favorite_outline, color: Colors.white,),
+                )
+              ],
+              
             ),
+            
             Container(
               width: 300,
               margin: EdgeInsets.only(top: 10),
@@ -109,7 +126,7 @@ Widget customContainer(String assetName, String title, String serve,
                   ),
                   Container(
                     // margin: EdgeInsets.only(left: 15),
-                    child: Icon(Icons.person_outline_outlined, color: Colors.grey) ,
+                    child: Icon(Icons.people, color: Colors.grey) ,
                   ),
                   Container(child: Text('$serve',
                     style: TextStyle(
@@ -197,8 +214,12 @@ class favoritesTabBar extends StatelessWidget {
               isScrollable: true,
               indicator: BoxDecoration(
                 borderRadius: BorderRadius.only(
+                    
                     topLeft: Radius.circular(10),
-                    bottomLeft: Radius.circular(10)),
+                    bottomLeft: Radius.circular(10),
+                    topRight: Radius.circular(10),
+                    bottomRight: Radius.circular(10)
+                ),
                 color: Colors.green,
               ),
 
@@ -208,7 +229,8 @@ class favoritesTabBar extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(10),
-                        bottomLeft: Radius.circular(10)),
+                        bottomLeft: Radius.circular(10)
+                    ),
                     // color: Colors.green,
                   ),
                   // color: Colors.black,

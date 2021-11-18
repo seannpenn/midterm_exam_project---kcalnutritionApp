@@ -2,6 +2,7 @@
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_kcalnutritionapp/layout/defaultLayout.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:flutter_application_kcalnutritionapp/screens/onBoardingScreens/AllScreen.dart';
 import 'package:flutter_application_kcalnutritionapp/screens/login.dart';
@@ -44,7 +45,7 @@ class onBoardingPage extends StatelessWidget{
       next: Icon(Icons.arrow_forward),
       skip: const Text("Skip"),
       // done: Text('Read', style: TextStyle(fontWeight: FontWeight.w600)), 
-      done: Text('Read'), 
+      done: Text(''), 
       onDone: () => (){},
 
       dotsDecorator: const DotsDecorator(
@@ -83,10 +84,15 @@ class customButton extends StatelessWidget{
           borderRadius: BorderRadius.circular(20),
           color: Colors.redAccent[100],
           child: MaterialButton(
-            minWidth: 350,
+            minWidth: 250,
             height: 70,
             padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-            onPressed: (){}, // add this here
+            onPressed: (){
+              Navigator.push(context, new MaterialPageRoute(
+                    builder: (context) =>
+                    new defaultLayout())
+                  );
+            }, // add this here
             child: Text('Get Started',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 30, color: Colors.white)

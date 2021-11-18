@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_kcalnutritionapp/layout/defaultLayoutPages/favorites/favorites.dart';
-import 'package:flutter_application_kcalnutritionapp/layout/defaultLayoutPages/home.dart';
+import 'package:flutter_application_kcalnutritionapp/layout/navPages/camera.dart';
+import 'package:flutter_application_kcalnutritionapp/layout/navPages/home.dart';
+import 'package:flutter_application_kcalnutritionapp/layout/navPages/profile.dart';
+import 'package:flutter_application_kcalnutritionapp/layout/navPages/search.dart';
 
 class defaultLayout extends StatefulWidget {
   const defaultLayout({Key? key}) : super(key: key);
@@ -15,10 +18,10 @@ class _MyStatefulWidgetState extends State<defaultLayout> {
   List<Widget> _widgetOptions = <Widget>[
     
     home(),
+    search(),
+    camera(),
     favorites(),
-    favorites(),
-    favorites(),
-    favorites(),
+    profile(),
   ];
 
   void _onItemTapped(int index) {
@@ -34,6 +37,7 @@ class _MyStatefulWidgetState extends State<defaultLayout> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        
         backgroundColor: Colors.white,
         unselectedIconTheme: IconThemeData(
         color: Colors.grey,
