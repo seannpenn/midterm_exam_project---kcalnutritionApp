@@ -65,6 +65,7 @@ class _splashScreenState extends State<splashScreen> {
   }
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: landingPage(),
     );
   }
